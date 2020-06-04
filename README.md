@@ -71,6 +71,7 @@ di chuyển vào trong thư mục object_detection
 <p align="center">
   <img src="doc/jupyter_notebook_dogs.jpg">
 </p>
+
 ## B 3 label image
 tải lableimg có thể search google và bật lableImg.exe chọn dir\forder chứa ảnh cần label
 nếu không thể bật lableImg.exe
@@ -86,15 +87,20 @@ thì vui lòng xóa hết tất cả cả các file trong thư mục(lưu ý ch�
 ### 4.1 tạo data train
 tại vị trí \object_detection
 run dòng code
-(tensorflow1) C:\tensorflow1\models\research\object_detection> python xml_to_csv.py để chuyển các file xml trong label thành file csv
+```
+(tensorflow1) C:\tensorflow1\models\research\object_detection> python xml_to_csv.py
+```
+để chuyển các file xml trong label thành file csv
 mở file generate_tfrecord.py bằng cách gì cũng được chỉnh sửa chỗ này 
+```
 def class_text_to_int(row_label):
     if row_label == 'bienso':
         return 1
     else:
         None
+```        
 thành các class mà bạn muốn detection ví dụ 3 class quần áo nón
-def class_text_to_int(row_label):
+```def class_text_to_int(row_label):
     if row_label == 'quan':
         return 1
     elif row_label == 'ao':
@@ -103,14 +109,17 @@ def class_text_to_int(row_label):
         return 3
     else:
         None
-        
+```
+
 sau đó run 2 dòng code
+```
 python generate_tfrecord.py --csv_input=images\train_labels.csv --image_dir=images\train --output_path=train.record
 python generate_tfrecord.py --csv_input=images\test_labels.csv --image_dir=images\test --output_path=test.record
-
+```
 ### 4.2 tạo label map và cấu hình Training
 tạo 1 file bỏ vào  C:\tensorflow1\models\research\object_detection\training folder
 với tên là labelmap.pbtxt lưu ý định dạng pbtxt chứ không phải txt
+```
 item {
   id: 1
   name: 'quan'
@@ -125,34 +134,39 @@ item {
   id: 3
   name: 'non'
 }
-
+```
 ### 4.3 chỉnh sửa thông số cho việc train
 mở thư mục C:\tensorflow1\models\research\object_detection\samples\configs và copy file faster_rcnn_inception_v2_pets.config
 sau đó qua thư mục \object_detection\training dán vào
 dùng visual code để dễ chỉnh sửa
-tại dòng số 9 num_class : chuyển đổi thành số class mà bạn muốn train
-tại dòng số 106 chỉnh sửa thành : fine_tune_checkpoint : "C:/tensorflow1/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/model.ckpt"
-tại dòng 123 125
+- tại dòng số 9 num_class : chuyển đổi thành số class mà bạn muốn train
+- tại dòng số 106 chỉnh sửa thành : fine_tune_checkpoint : "C:/tensorflow1/models/research/object_detection/faster_rcnn_inception_v2_coco_2018_01_28/model.ckpt"
+- tại dòng 123 125
 input_path : "C:/tensorflow1/models/research/object_detection/train.record"
 label_map_path: "C:/tensorflow1/models/research/object_detection/training/labelmap.pbtxt"
-tại dòng 130 : nhập số ảnh dùng dể test trong thư mục \images\test vào vị trí num_examples
-tại dòng 135 137 
+- tại dòng 130 : nhập số ảnh dùng dể test trong thư mục \images\test vào vị trí num_examples
+- tại dòng 135 137 
 input_path : "C:/tensorflow1/models/research/object_detection/test.record"
 label_map_path: "C:/tensorflow1/models/research/object_detection/training/labelmap.pbtxt"
 Sau đó save và bắt đầu run nào
 ## 5 Train
 tại vị trí \Object_detection  run dòng code
+```
 python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config
-
+```
 ## 6 xuất ra model
 sau khi chạy 1 số bước (ít nhất vài trăm step .tốt nhất đến khi loss ~ 0.05 và ít thay đổi)
 crl + C để dừng lại
 xuất ra dòng code 
+```
 python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --trained_checkpoint_prefix training/model.ckpt-XXXX --output_directory inference_graph
+```
 trong đó XXXX thay thế bằng số model to nhất trong thư mục object_detection\trainning
 ví dụ chạy 350 step sẽ có file lưu là model.ckpt-350-....
 thì ta run lệnh
+```
 python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --trained_checkpoint_prefix training/model.ckpt-350 --output_directory inference_graph
+```
 
 ## 7 Test thử model mới nào
 copy file ảnh hoặc video vào trong thư mục Object_detection chỉnh lại tên trùng với tên trong file Object_detection_image.py đối với ảnh
@@ -160,5 +174,7 @@ video đối với file Object_detection_video.py hoặc sử dụng webcam Obje
 
 Sau đó tại thư mục Object_detection 
 run code 
+```
 python Object_detection_image.py/Object_detection_video.py/Object_detection_webcam.py
+```
 ok
