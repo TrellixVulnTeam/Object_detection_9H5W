@@ -5,11 +5,11 @@
 - In ra biển số
 
 # Hướng dẫn cách làm :
-B 1 : get data
-B 2 : cài môi trường
-B 3 : lable image
-B 4 : xuất ra model và test thử 
-B 5 : xuất flask app
+*B 1 : get data
+*B 2 : cài môi trường
+*B 3 : lable image
+*B 4 : xuất ra model và test thử 
+*B 5 : xuất flask app
 
 ## B 1 get data
 gồm 2 loại ô tô và xe máy :https://www.miai.vn/thu-vien-mi-ai/
@@ -65,7 +65,12 @@ copy and paste
 ```
 ### 2.5 test thử với hình ảnh và model đã train sẵn
 di chuyển vào trong thư mục object_detection
+```
 (tensorflow1) C:\tensorflow1\models\research\object_detection> jupyter notebook object_detection_tutorial.ipynb
+```
+<p align="center">
+  <img src="doc/jupyter_notebook_dogs.jpg">
+</p>
 ## B 3 label image
 tải lableimg có thể search google và bật lableImg.exe chọn dir\forder chứa ảnh cần label
 nếu không thể bật lableImg.exe
@@ -73,10 +78,10 @@ có thể clone từ https://github.com/tzutalin/labelImg làm theo hướng d�
 Lưu ý ở đây đang sử dụng nhận diện cho 1 class 'bienso' 
 nếu muốn sử dụng cho các class khác ví dụ 'quan' 'ao' 'non'
 thì vui lòng xóa hết tất cả cả các file trong thư mục(lưu ý chỉ xóa files không xóa thư mục
-tất cả file trong \object_detection\images\train  \object_detection\images\test
-2 tệp test_labels.csv  train_labels.csv trong  \object_detection\images
-tất cả file trong  \object_detection\training
-tất cả file trong  \object_detection\inference_graph
+- tất cả file trong \object_detection\images\train  \object_detection\images\test
+- 2 tệp test_labels.csv  train_labels.csv trong  \object_detection\images
+- tất cả file trong  \object_detection\training
+- tất cả file trong  \object_detection\inference_graph
 ## B 4 Trainning
 ### 4.1 tạo data train
 tại vị trí \object_detection
