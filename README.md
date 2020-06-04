@@ -1,7 +1,5 @@
 # -license-plate-identification
 
-get data from https://drive.google.com/open?id=1462m09rzfDHBx3dyjxmGV54dhHdTbcSF
-
 # Thuật toán giải:
 - Tìm vị trí biển số
 - In ra biển số
