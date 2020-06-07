@@ -1,0 +1,26 @@
+<annotation>
+	<folder>anh</folder>
+	<filename>0519.jpg</filename>
+	<path>C:\Users\Nguyen\Desktop\anh\0519.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>450</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bienso</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>175</xmin>
+			<ymin>183</ymin>
+			<xmax>350</xmax>
+			<ymax>303</ymax>
+		</bndbox>
+	</object>
+</annotation>

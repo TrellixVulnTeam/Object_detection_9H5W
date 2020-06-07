@@ -1,0 +1,26 @@
+<annotation>
+	<folder>anh</folder>
+	<filename>564.jpg</filename>
+	<path>C:\Users\Nguyen\Desktop\anh\564.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>472</width>
+		<height>303</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bienso</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>114</xmin>
+			<ymin>143</ymin>
+			<xmax>226</xmax>
+			<ymax>172</ymax>
+		</bndbox>
+	</object>
+</annotation>

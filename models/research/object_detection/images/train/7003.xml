@@ -1,0 +1,26 @@
+<annotation>
+	<folder>anh</folder>
+	<filename>7003.jpg</filename>
+	<path>C:\Users\Nguyen\Desktop\anh\7003.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>472</width>
+		<height>303</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bienso</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>296</xmin>
+			<ymin>262</ymin>
+			<xmax>377</xmax>
+			<ymax>284</ymax>
+		</bndbox>
+	</object>
+</annotation>

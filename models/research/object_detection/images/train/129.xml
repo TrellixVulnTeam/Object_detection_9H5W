@@ -1,0 +1,26 @@
+<annotation>
+	<folder>anh train</folder>
+	<filename>129.jpg</filename>
+	<path>C:\Users\Nguyen\Desktop\anh train\129.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>472</width>
+		<height>303</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bienso</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>134</xmin>
+			<ymin>255</ymin>
+			<xmax>217</xmax>
+			<ymax>279</ymax>
+		</bndbox>
+	</object>
+</annotation>
