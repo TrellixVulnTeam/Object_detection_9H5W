@@ -9,7 +9,6 @@
 *B 2 : cài môi trường
 *B 3 : lable image
 *B 4 : xuất ra model và test thử 
-*B 5 : xuất flask app
 
 ## B 1 get data
 gồm 2 loại ô tô và xe máy :https://www.miai.vn/thu-vien-mi-ai/
