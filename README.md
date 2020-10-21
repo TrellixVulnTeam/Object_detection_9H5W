@@ -1,5 +1,5 @@
 # -license-plate-identification
-
+sử dụng máy tính siêu cùi nhá (win 7 core 2 Due, 2 gb ram,run  bằng CPU :P)
 # Thuật toán giải:
 - Tìm vị trí biển số
 - In ra biển số
@@ -176,4 +176,5 @@ run code
 ```
 python Object_detection_image.py/Object_detection_video.py/Object_detection_webcam.py
 ```
+![test](https://user-images.githubusercontent.com/61773507/96670449-86ec1c00-1389-11eb-9081-a4cf8176d54a.jpg)
 ok
