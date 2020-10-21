@@ -182,3 +182,6 @@ ok
 ## Sau khi test thử thấy ok rồi thì mình làm cái Flask app cho vui nhỉ
 ![home page nè](https://user-images.githubusercontent.com/61773507/96672350-45aa3b00-138e-11eb-958e-db6a2b0083cb.png)
 ![classify nè](https://user-images.githubusercontent.com/61773507/96672450-85712280-138e-11eb-8baa-63947ca7b624.png)
+
+link forder flask app
+https://github.com/Tdpro1612/Flask-app.git
