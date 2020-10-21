@@ -1,4 +1,4 @@
-# -license-plate-identification
+# Nhận diện biển số xe
 sử dụng máy tính siêu cùi nhá (win 7 core 2 Due, 2 gb ram,run  bằng CPU :P)
 # Thuật toán giải:
 - Tìm vị trí biển số
