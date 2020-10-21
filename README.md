@@ -178,3 +178,5 @@ python Object_detection_image.py/Object_detection_video.py/Object_detection_webc
 ```
 ![test](https://user-images.githubusercontent.com/61773507/96670449-86ec1c00-1389-11eb-9081-a4cf8176d54a.jpg)
 ok
+
+## Sau khi test thử thấy ok rồi thì mình làm cái Flask app cho vui nhỉ
