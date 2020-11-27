@@ -67,9 +67,7 @@ di chuyển vào trong thư mục object_detection
 ```
 (tensorflow1) C:\tensorflow1\models\research\object_detection> jupyter notebook object_detection_tutorial.ipynb
 ```
-<p align="center">
-  <img src="doc/jupyter_notebook_dogs.jpg">
-</p>
+
 
 ## B 3 label image
 tải lableimg có thể search google và bật lableImg.exe chọn dir\forder chứa ảnh cần label
